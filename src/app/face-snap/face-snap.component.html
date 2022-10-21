@@ -1,21 +1,22 @@
 <div class="flex justify-center">
-    <div class="rounded-lg shadow-lg bg-white max-w-sm  face-snap-card" [ngClass]="{ snapped: snapsDone === true}">
-        <img class="rounded-t-lg" img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
-        <div class="p-6">
-            <h2 class="text-gray-900 text-xl font-medium mb-2">{{ faceSnap.title | uppercase}}</h2>
-            <p class="text-gray-700 text-base mb-4">
-                {{ faceSnap.description }}
-            </p>
-            <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location}}</p>
-            <p class="text-gray-700 text-base mb-4"> Mise en ligne le
-                {{ faceSnap.createdDate | date:'d MMMM yyyy à HH:mm' }}
-            </p>
-            <p>
-                <button type="button" (click)="onSnap()"
-                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-                    {{ buttonText }}</button>
-                <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.snaps + ',0)' }"> {{ faceSnap.snaps }}</span>
-            </p>
-        </div>
+  <div [ngClass]="{ snapped: snapsDone === true}" class="rounded-lg shadow-lg bg-white max-w-sm  face-snap-card">
+    <img [alt]="faceSnap.title" [src]="faceSnap.imageUrl" class="rounded-t-lg" img/>
+    <div class="p-6">
+      <h2 class="text-gray-900 text-xl font-medium mb-2">{{ faceSnap.title | uppercase }}</h2>
+      <p class="text-gray-700 text-base mb-4">
+        {{ faceSnap.description }}
+      </p>
+      <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location}}</p>
+      <p class="text-gray-700 text-base mb-4"> Mise en ligne le
+        {{ faceSnap.createdDate | date:'d MMMM yyyy à HH:mm' }}
+      </p>
+      <p>
+        <button (click)="onSnap()"
+                class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                type="button">
+          {{ buttonText }}</button>
+        <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.snaps + ',0)' }"> {{ faceSnap.snaps }}</span>
+      </p>
     </div>
+  </div>
 </div>
