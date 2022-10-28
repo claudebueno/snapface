@@ -2,3 +2,19 @@ body {
   // background-color: #193051;
   background-color: #FFFFFF;
 }
+button {
+  background-color: #3b5d91;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: lightgray 3px 3px 7px;
+  margin-right: 20px;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
+}
+
