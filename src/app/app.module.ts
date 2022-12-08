@@ -8,8 +8,12 @@ import * as fr from '@angular/common/locales/fr';
 import { HeaderComponent } from './header/header.component';
 import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 import { FooterComponent } from './footer/footer.component';
-import {AppRoutingModule} from "./app-routing.module";
+import { AppRoutingModule } from "./app-routing.module";
 import { LandingPageComponent } from './landing-page/landing-page.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }

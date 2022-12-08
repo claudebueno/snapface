@@ -11,16 +11,19 @@ h1 {
   font-weight: 600;
   color: #FFFFFF;
 }
+
 a {
   margin: 0 10px;
   color: #FFF;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
 }
+
 .active {
   color: #FFF;
   text-decoration: underline;
